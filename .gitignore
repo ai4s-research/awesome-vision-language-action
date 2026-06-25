@@ -1,0 +1,36 @@
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary / logs / caches
+*.tmp
+*.temp
+.cache/
+*.log
+logs/
+
+# Python tooling
+__pycache__/
+*.py[cod]
+venv/
+env/
+
+# Backups
+*.backup
+*.bak
+*.orig
+
+# Local tools
+*_results.json
