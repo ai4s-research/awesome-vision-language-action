@@ -1,4 +1,5 @@
 <div align="center">
+  <img src="assets/banner.jpg" alt="Awesome Vision-Language-Action" width="100%">
   <h1>🦾 Awesome Vision-Language-Action (VLA)</h1>
   <p>A curated list of Vision-Language-Action (VLA) models for robotics and embodied AI: foundation models, architectures, benchmarks, and datasets, with a focus on 2025–2026.</p>
   <p>
