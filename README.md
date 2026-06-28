@@ -26,6 +26,7 @@
 - [🏗️ Architectures & Action Representations](#️-architectures--action-representations)
 - [⚡ Efficient & Real-time VLA](#-efficient--real-time-vla)
 - [🧠 Reasoning & World-model-augmented VLA](#-reasoning--world-model-augmented-vla)
+- [🚗 Autonomous-Driving VLA](#-autonomous-driving-vla)
 - [🧪 Data, Simulation & Benchmarks](#-data-simulation--benchmarks)
 - [🗂️ Datasets](#️-datasets)
 - [💻 Open-source Models & Code](#-open-source-models--code)
@@ -40,6 +41,7 @@
 - [Pure Vision Language Action (VLA) Models: A Comprehensive Survey](https://arxiv.org/abs/2509.19012) — Focuses specifically on end-to-end "pure" VLAs that map pixels+language straight to actions, and how they generalize across objects, scenes, and tasks (2025).
 - [A Survey on Efficient Vision-Language-Action Models](https://arxiv.org/abs/2510.24795) — The first review centered on efficiency, splitting the pipeline into efficient model design, training, and data collection — increasingly the field's real bottleneck (2025).
 - [Vision-Language-Action in Robotics: A Survey of Datasets, Benchmarks, and Data Engines](https://arxiv.org/abs/2604.23001) — A 2026 data-centric survey arguing that data engines, not architectures, are now the limiting factor in VLA progress (2026).
+- [World Action Models: A Survey](https://arxiv.org/abs/2606.20781) — Defines the emerging World-Action-Model (WAM) paradigm that jointly learns a world model and a policy; the reference framing for the 2026 wave that fuses prediction and acting (2026).
 
 ## 🤖 Generalist & Foundation VLA Models
 
@@ -48,14 +50,17 @@
 - [OpenVLA: An Open-Source Vision-Language-Action Model](https://arxiv.org/abs/2406.09246) — The open-source reference point: a 7B model (DINOv2+SigLIP → Llama-2) trained on 970k Open-X demos that beats the 55B RT-2-X, and which nearly every later paper fine-tunes or ablates against (2024).
 - [π0: A Vision-Language-Action Flow Model for General Robot Control](https://arxiv.org/abs/2410.24164) — Physical Intelligence's flagship: pairs a PaliGemma-class VLM with a flow-matching action expert to emit smooth, high-frequency continuous action chunks for dexterous cross-embodiment control (2024).
 - [π0.5: a VLA with Open-World Generalization](https://arxiv.org/abs/2504.16054) — Co-trains π0 on heterogeneous multi-robot, web, and high-level subtask-prediction data to generalize to *entirely unseen homes* (e.g. cleaning a kitchen it has never seen) (2025).
-- [π*0.6: a VLA That Learns From Experience (RECAP)](https://www.pi.website/blog/pistar06) — Adds RECAP, RL via advantage-conditioned policies over demos, corrections, and autonomous experience, more than doubling throughput and roughly halving failures on the hardest real-world tasks (2025).
+- [π*0.6: a VLA That Learns From Experience (RECAP)](https://arxiv.org/abs/2511.14759) — Adds RECAP, RL via advantage-conditioned policies over demos, corrections, and autonomous experience, more than doubling throughput and roughly halving failures on the hardest real-world tasks ([blog](https://www.pi.website/blog/pistar06)) (2025).
 - [Octo: An Open-Source Generalist Robot Policy](https://arxiv.org/abs/2405.12213) — Transformer with a diffusion action head and modular attention (language *or* goal-image conditioning), pretrained on 800k Open-X trajectories and easily fine-tuned to new sensors and action spaces (2024).
 - [GR00T N1: An Open Foundation Model for Generalist Humanoid Robots](https://arxiv.org/abs/2503.14734) — NVIDIA's dual-system VLA: an Eagle-2 VLM "thinks" (System 2) while a DiT flow-matching policy emits high-frequency actions (System 1), released as an open 2.2B humanoid model (2025).
-- [GR00T N1.6](https://research.nvidia.com/labs/gear/gr00t-n1_6/) — CES 2026 upgrade pairing a deeper (32-layer) DiT action head with a Cosmos-Reason VLM for long-horizon decomposition on bimanual and loco-manipulation tasks (2026).
+- [GR00T N1.7](https://huggingface.co/blog/nvidia/gr00t-n1-7) — NVIDIA's current open humanoid VLA (3B): a reasoning policy on a Cosmos-Reason2-2B backbone, pretrained on ~20K h of EgoScale human video; supersedes N1.5/N1.6 (released Apr 2026) (2026).
 - [Gemini Robotics: Bringing AI into the Physical World](https://arxiv.org/abs/2503.20020) — A Gemini-2.0-based VLA plus a Gemini Robotics-ER embodied-reasoning model, delivering dexterous, reactive manipulation that stays robust to object and scene variation (2025).
 - [Gemini Robotics 1.5](https://arxiv.org/abs/2510.03342) — Adds an agentic "think-before-acting" loop (GR-ER 1.5 plans with tools, GR 1.5 executes) plus an on-device VLA variant fine-tunable from ~50 demos (2025).
 - [Helix: A VLA for Generalist Humanoid Control](https://www.figure.ai/news/helix) — Figure's proprietary VLA, notable as an early demonstration of high-rate continuous full upper-body humanoid control (fingers/wrists/torso/head) via a slow System-2 VLM plus an 80M fast System-1 controller, even coordinating two robots (2025).
 - [LingBot-VLA: A Pragmatic VLA Foundation Model](https://arxiv.org/abs/2601.18692) — A cost-efficient foundation model trained on ~20,000 hours of dual-arm data across 9 robot configurations, with open code/models and strong cross-platform generalization (2026).
+- [X-VLA: Soft-Prompted Transformer as Scalable Cross-Embodiment VLA](https://arxiv.org/abs/2510.10274) — ICLR 2026; a 0.9B flow-matching VLA using soft prompts for embodiment, setting SOTA across LIBERO / SimplerEnv / RoboTwin-2.0 / CALVIN — a standout open cross-embodiment result (2025).
+- [InternVLA-M1: A Spatially Guided Vision-Language-Action Framework](https://arxiv.org/abs/2510.13778) — A spatially-grounded generalist policy (grounding pretrain → action post-train) with open code; a strong 2025-2026 open generalist alongside OpenVLA and π0 (2025).
+- [WholebodyVLA](https://github.com/OpenDriveLab/WholebodyVLA) — ICLR 2026; a VLA for whole-body humanoid loco-manipulation, extending VLA control beyond tabletop arms to legs+torso+arms (2026).
 
 ## 🏗️ Architectures & Action Representations
 
@@ -99,6 +104,13 @@
 - [Genie: Generative Interactive Environments](https://arxiv.org/abs/2402.15391) — An 11B world model trained unsupervised on internet video that learns a *latent action space*, generating action-controllable playable environments — a key idea behind action-from-video VLA pretraining (2024).
 - [UniSim: Learning Interactive Real-World Simulators](https://arxiv.org/abs/2310.06114) — A generative simulator that renders visual outcomes of both high-level instructions and low-level controls, enabling sim-only agents to transfer zero-shot to real robots (2023).
 
+## 🚗 Autonomous-Driving VLA
+
+VLA applied to end-to-end driving — a large, fast-moving subfield distinct from tabletop manipulation.
+
+- [AutoVLA: A Vision-Language-Action Model for End-to-End Autonomous Driving](https://arxiv.org/abs/2506.13757) — NeurIPS 2025; unifies reasoning and trajectory action in one model with RL-based reasoning, a reference open driving VLA (2025).
+- [OpenDriveVLA](https://github.com/DriveVLA/OpenDriveVLA) — AAAI 2026; an open end-to-end driving VLA generating reliable driving actions from 3D-grounded language and environment tokens (2025).
+
 ## 🧪 Data, Simulation & Benchmarks
 
 - [LIBERO: Benchmarking Knowledge Transfer for Lifelong Robot Learning](https://arxiv.org/abs/2306.03310) — 130 language-conditioned manipulation tasks across 4 suites with teleop demos; now the de facto evaluation suite for fine-tuned VLAs (2023).
@@ -108,6 +120,8 @@
 - [ManiSkill3: GPU-Parallelized Robotics Simulation and Benchmark](https://arxiv.org/abs/2410.00425) — High-throughput SAPIEN-based manipulation simulator with massively parallel physics and RL/IL baselines ([code](https://github.com/haosulab/ManiSkill)) (2024).
 - [BEHAVIOR-1K: A Human-Centered Embodied AI Benchmark](https://arxiv.org/abs/2403.09227) — 1,000 everyday activities across 50 scenes in the OmniGibson simulator, pushing toward realistic household generalization (2024).
 - [VLABench: Language-Conditioned Manipulation with Long-Horizon Reasoning](https://arxiv.org/abs/2412.18194) — A VLA-specific benchmark that stresses world knowledge, complex reasoning, and long-horizon understanding rather than short pick-and-place (2024).
+- [RoboTwin 2.0: A Scalable Data Generator and Benchmark](https://arxiv.org/abs/2506.18088) — The de-facto 2025 bimanual sim benchmark + data generator (50 tasks, 100K demos, strong domain randomization), used by X-VLA and most dual-arm work (2025).
+- [RoboChallenge: Large-scale Real-robot Evaluation of Embodied Policies](https://arxiv.org/abs/2510.17950) — A standardized real-robot evaluation effort moving VLA comparison off sim-only scores onto physical hardware; part of the 2026 real-eval shift (2025).
 
 ## 🗂️ Datasets
 
@@ -124,7 +138,7 @@
 - [openpi (π0 / π0.5, code)](https://github.com/Physical-Intelligence/openpi) — Physical Intelligence's official open release of π0 and π0.5 weights and inference code (2024-2025).
 - [LeRobot](https://github.com/huggingface/lerobot) — Hugging Face's end-to-end robot-learning library and the home of SmolVLA, plus datasets, training, and real-robot deployment (2024).
 - [RoboVLMs (code)](https://github.com/Robot-VLAs/RoboVLMs) — The unified framework from the "What Matters in Building VLAs" study, letting you swap VLM backbones and action heads (2024).
-- [Isaac GR00T (code)](https://github.com/NVIDIA/Isaac-GR00T) — NVIDIA's official repo for the GR00T N1/N1.5 humanoid foundation models, including fine-tuning recipes (2025).
+- [Isaac GR00T (code)](https://github.com/NVIDIA/Isaac-GR00T) — NVIDIA's official repo for the GR00T humanoid foundation models (through N1.7), including fine-tuning recipes (2026).
 
 ## 🔗 Related Awesome Lists
 
