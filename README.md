@@ -63,6 +63,7 @@
 - [X-VLA: Soft-Prompted Transformer as Scalable Cross-Embodiment VLA](https://arxiv.org/abs/2510.10274) — ICLR 2026; a 0.9B flow-matching VLA using soft prompts for embodiment, setting SOTA across LIBERO / SimplerEnv / RoboTwin-2.0 / CALVIN — a standout open cross-embodiment result (2025).
 - [InternVLA-M1: A Spatially Guided Vision-Language-Action Framework](https://arxiv.org/abs/2510.13778) — A spatially-grounded generalist policy (grounding pretrain → action post-train) with open code; a strong 2025-2026 open generalist alongside OpenVLA and π0 (2025).
 - [WholebodyVLA](https://github.com/OpenDriveLab/WholebodyVLA) — ICLR 2026; a VLA for whole-body humanoid loco-manipulation, extending VLA control beyond tabletop arms to legs+torso+arms (2026).
+- [MolmoAct2: Action Reasoning Models for Real-world Deployment](https://arxiv.org/abs/2605.02881) — Allen Institute's fully open (Apache-2.0 weights+code+data) action-reasoning VLA: a Molmo2-ER VLM whose layers condition a flow-matching action expert via per-layer KV cache, plus an OpenFAST action tokenizer, beating π0.5 across 7 sim+real benchmarks while releasing the largest open bimanual dataset (720h) ([code](https://github.com/allenai/molmoact2)) (2026).
 
 ## 🏗️ Architectures & Action Representations
 
