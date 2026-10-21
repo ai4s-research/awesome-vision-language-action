@@ -130,6 +130,7 @@ VLA applied to end-to-end driving — a large, fast-moving subfield distinct fro
 - [VLABench: Language-Conditioned Manipulation with Long-Horizon Reasoning](https://arxiv.org/abs/2412.18194) — A VLA-specific benchmark that stresses world knowledge, complex reasoning, and long-horizon understanding rather than short pick-and-place (2024).
 - [RoboTwin 2.0: A Scalable Data Generator and Benchmark](https://arxiv.org/abs/2506.18088) — The de-facto 2025 bimanual sim benchmark + data generator (50 tasks, 100K demos, strong domain randomization), used by X-VLA and most dual-arm work (2025).
 - [RoboChallenge: Large-scale Real-robot Evaluation of Embodied Policies](https://arxiv.org/abs/2510.17950) — A standardized real-robot evaluation effort moving VLA comparison off sim-only scores onto physical hardware; part of the 2026 real-eval shift (2025).
+- [Provael: Adversarial Evaluation for VLA Policies](https://github.com/provael/provael) — Software, not a paper. Perturbs the instruction and camera observation a policy receives in LIBERO or Meta-World and reports an attack success rate with a task-clustered 95% CI against a matched benign-control floor; the failure predicate is a keep-out condition on the end-effector rather than task success. Apache-2.0, CPU-first ([docs](https://www.provael.com)) (2026).
 
 ## 🗂️ Datasets
 
