@@ -98,6 +98,7 @@
 - [EdgeVLA: Efficient Vision-Language-Action Models](https://arxiv.org/abs/2507.14049) — Combines non-autoregressive end-effector prediction with small language models for ~7× speedup, targeting real-time on-robot edge deployment (2025).
 - [FASTER: Rethinking Real-Time Flow VLAs](https://arxiv.org/abs/2603.19199) — Adaptive inference scheduling that prioritizes immediate actions to slash reaction latency in flow-based VLAs, validated on a high-speed table-tennis task (2026).
 - [Efficient Long-Horizon VLA via Static-Dynamic Disentanglement](https://arxiv.org/abs/2602.03983) — Separates static scene context from dynamic content to escape the limited input-frame window and quadratic-attention cost of long-horizon VLAs (2026).
+- [MiniCPM-Robot](https://github.com/OpenBMB/MiniCPM-Robot) — OpenBMB's Apache-2.0 on-device robot brain family: a 1.5B VLA (RobotManip) whose streaming context + 4× visual-token compression cut per-step compute from 125 to 3.3 TFLOPs with 60-frame history while beating larger π0.5/Qwen-VLA on LIBERO/CALVIN/RoboTwin2, plus a 0.9B fully on-device target tracker running 5+ FPS on a Go2's Jetson (2026).
 
 ## 🧠 Reasoning & World-model-augmented VLA
 
