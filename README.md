@@ -78,6 +78,7 @@
 - [Diffusion Policy: Visuomotor Policy Learning via Action Diffusion](https://arxiv.org/abs/2303.04137) — The foundational diffusion-action head: represents the visuomotor policy as conditional denoising diffusion over action sequences, cleanly handling multimodal action distributions (2023).
 - [CogACT: Synergizing Cognition and Action in Robotic Manipulation](https://arxiv.org/abs/2411.19650) — Cleanly decouples cognition from action by feeding a VLM backbone into a lightweight diffusion action transformer, a componentized design that became a common template (2024).
 - [TinyVLA: Towards Fast, Data-Efficient VLA Models](https://arxiv.org/abs/2409.12514) — Drops autoregressive token generation for a diffusion head on a sub-1B VLM and skips robot-data pre-training, beating OpenVLA on speed and data efficiency (2024).
+- [DexVLA: Vision-Language Model with Plug-In Diffusion Expert for General Robot Control](https://arxiv.org/abs/2502.05855) — CoRL 2025; bolts a ~1B-param ScaleDP diffusion action expert onto a small Qwen2-VL-2B backbone and trains it with a three-stage cross-embodiment curriculum, mastering dexterous long-horizon tasks like laundry folding and adapting to a novel bimanual embodiment from ~100 demos — evidence that a big diffusion head can out-gun a big VLM ([code](https://github.com/juruobenruo/dexvla)) (2025).
 
 ### Flow-matching & latent action
 
