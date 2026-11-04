@@ -161,6 +161,7 @@ VLA applied to end-to-end driving — a large, fast-moving subfield distinct fro
 - [LeRobot](https://github.com/huggingface/lerobot) — Hugging Face's end-to-end robot-learning library and the home of SmolVLA, plus datasets, training, and real-robot deployment (2024).
 - [RoboVLMs (code)](https://github.com/Robot-VLAs/RoboVLMs) — The unified framework from the "What Matters in Building VLAs" study, letting you swap VLM backbones and action heads (2024).
 - [Isaac GR00T (code)](https://github.com/NVIDIA/Isaac-GR00T) — NVIDIA's official repo for the GR00T humanoid foundation models (through N1.7), including fine-tuning recipes (2026).
+- [VLA Foundry](https://arxiv.org/abs/2604.19728) — TRI's open framework unifying the full LLM→VLM→VLA training pipeline in one codebase, releasing fully-from-scratch Foundry-VLA-1.7B and Qwen3-VL-based Foundry-Qwen3VLA-2.1B weights — a rare end-to-end-open recipe, not just fine-tuning scripts ([code](https://github.com/TRI-ML/vla_foundry), [project](https://tri-ml.github.io/vla_foundry/)) (2026).
 
 ## 🔗 Related Awesome Lists
 
