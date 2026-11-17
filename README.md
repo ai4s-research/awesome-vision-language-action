@@ -117,6 +117,7 @@
 
 ## 🧠 Reasoning & World-model-augmented VLA
 
+- [On Agentic Manipulation Policies (AMP1)](https://arxiv.org/abs/2611.09892) — Apple's challenge to the specialist-VLA paradigm: a generalist agentic model *commands* the manipulator with no predefined skills, one harness running unchanged across single-arm, bimanual, and mobile setups — 85.6% zero-shot on RoboLab-120 (vs 49.2% for VLAs, 42.9% for WAMs), 104/108 real-world trials, and a memory-augmented variant that learns across episodes ([code](https://github.com/apple-aiml-research/ml-amp), [project](https://apple-aiml-research.github.io/ml-amp/)) (2026).
 - [Recursive Harness Distillation across Agents for Robot Manipulation](https://arxiv.org/abs/2609.33378) — Distills Astra's robot-intervention experience into a playbook for the lighter Luna agent and recursively refines it from Luna's execution feedback, transferring manipulation guidance around frozen VLAs without weight updates (2026).
 - [Robotic Control via Embodied Chain-of-Thought Reasoning (ECoT)](https://arxiv.org/abs/2407.08693) — Trains VLAs to reason over plans, subtasks, and visually grounded features (bounding boxes, gripper positions) before acting, lifting OpenVLA success by 28% with no new robot data (2024).
 - [Emma-X: Embodied Multimodal Action Model with Grounded CoT and Look-ahead Spatial Reasoning](https://arxiv.org/abs/2412.11974) — A 7B OpenVLA derivative that predicts grounded subtask reasoning plus 2D/3D gripper targets, trained on 60k auto-annotated BridgeV2 trajectories (2024).
