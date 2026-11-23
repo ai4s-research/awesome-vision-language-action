@@ -147,6 +147,7 @@ VLA applied to end-to-end driving — a large, fast-moving subfield distinct fro
 - [AutoVLA: A Vision-Language-Action Model for End-to-End Autonomous Driving](https://arxiv.org/abs/2506.13757) — NeurIPS 2025; unifies reasoning and trajectory action in one model with RL-based reasoning, a reference open driving VLA (2025).
 - [OpenDriveVLA](https://github.com/DriveVLA/OpenDriveVLA) — AAAI 2026; an open end-to-end driving VLA generating reliable driving actions from 3D-grounded language and environment tokens (2025).
 - [ChainFlow-VLA: Causal Flow Planning with Vision-Language Models](https://arxiv.org/abs/2605.23270) — NeurIPS 2026; unifies causal autoregressive trajectory-mode generation with a VLM-conditioned diffusion refiner over residual space, topping the NAVSIM v1 leaderboard at 94.85 (human-level) while staying robust in ambiguous, long-tail interactive scenarios; Apache-2.0 with open weights ([code](https://github.com/AFARI-Research/ChainFlow-VLA)) (2026).
+- [Impromptu VLA: Open Weights and Open Data for Driving Vision-Language-Action Models](https://arxiv.org/abs/2505.23757) — A rare fully open driving-VLA release: an 80K-clip corner-case dataset (distilled from 2M+ source clips across 8 open datasets) with planning-oriented QA and action trajectories, plus the trained models — substantially lifting closed-loop NeuroNCAP scores and cutting collision rates ([code](https://github.com/ahydchh/Impromptu-VLA)) (2025).
 
 ## 🧪 Data, Simulation & Benchmarks
 
